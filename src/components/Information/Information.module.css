@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Calligraffitti&family=GFS+Didot&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+.title {
+  font-family: 'Roboto', sans-serif; /* Aplicar la fuente Roboto */
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0px 8px 12px rgba(147, 112, 219, 0.5);
+  opacity: 0.98;
+}
+
+.mapCard {
+  margin-top: 5vh;
+  display: block;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+
+}
+
+.image {
+  border-radius: 15px;
+  margin-top: 10vh;
+  max-width: 100%;
+  box-shadow: 0px 8px 12px rgba(147, 112, 219, 0.5);
+  max-height: 95vh;
+  opacity: 0.9;
+}
+
+.title i {
+  margin-right: 10px; /* Espacio entre el ícono y el texto */
+}

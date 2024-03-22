@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Calligraffitti&family=GFS+Didot&display=swap");
+
+.top {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.mr {
+    margin-top: 10px;
+  color: white;
+  text-align: center;
+  font-family: "Calligraffitti", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+}
+
+.navbar {
+  color: white;
+  justify-content: center;
+  display: flex;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.navLink {
+    color: white;
+    text-decoration: none;
+    padding: 1vw;
+    font-size: 22px;
+    font-family: "GFS Didot", serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: font-size 0.5s; /* Ajusta la duración de la transición */
+  }
+  
+  .navLink:hover {
+    font-size: 25px; /* Aumenta un poco el tamaño de la fuente al pasar el cursor */
+  }
+  
+  .background{
+    background-color: rgb(201, 128, 250);
+    
+  }
+
+  
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar > div {
+    margin-bottom: 10px; /* Añade un margen inferior entre los enlaces */
+  }
+}
