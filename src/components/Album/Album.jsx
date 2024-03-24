@@ -8,9 +8,9 @@ export default function Album() {
   const dispatch = useDispatch();
   const [formData, setFormData] = useState({
     id_invitado: "",
-    foto: "",
+    picture: "",
   });
-  const [selectedInvitado, setSelectedInvitado] = useState("");
+  
   const invitados = useSelector((state) => state.invitados);
   const fotos = useSelector((state) => state.fotos);
 
@@ -46,8 +46,6 @@ export default function Album() {
       // setShowError(true);
     }
   };
-
-  console.log(formData.picture);
 
   return (
     <div className={Style.container} id="fotos">

@@ -23,7 +23,7 @@ export default function Welcome() {
           <a className={Style.navLink} href="#ListaInvitados" disabled>
             <BsPeople className={Style.icon} /> Invitados
           </a>
-          <span className={Style.comingSoon}>(próximamente)</span>
+          
         </div>
         <div>
           <a className={Style.navLink} href="#libroFirmas" disabled>
