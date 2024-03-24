@@ -12,7 +12,7 @@ export default function Lista() {
   }, []);
 
   return (
-    <div className={Style.invitadosList}>
+    <div className={Style.invitadosList} id='ListaInvitados'>
       <h2 className={Style.title}>Lista de Invitados: {invitados.length-2}</h2>
       <ul className={Style.invitados}>
         {invitados.map((invitado, index) => (
