@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Chilanka&display=swap");
+
+.container {
+  padding: 20px;
+  margin: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  border-radius: 10px;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.album {
+  text-align: center;
+  font-family: "Chilanka", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 28px;
+}
+
+.auxilary {
+  text-align: center;
+  font-family: "Chilanka", cursive;
+  font-weight: 400;
+  font-style: normal;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.uploadContainer {
+  display: flex;
+  flex-direction: block;
+}
+
+.uploadFoto {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 0;
+  padding: 20px;
+  background-color: rgb(241, 113, 235);
+  color: whitesmoke;
+  box-shadow: 0 0 10px rgb(241, 113, 235);
+  border: 1px solid rgb(241, 113, 235);
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconImage {
+  font-size: 48px;
+}
+
+.customFileInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.uploadFotoInput {
+  display: none;
+}
+
+.iconImage {
+  margin-right: 10px;
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 0;
+  padding: 20px;
+  background-color: rgb(241, 113, 235);
+  color: whitesmoke;
+  box-shadow: 0 0 10px rgb(241, 113, 235);
+  border: 1px solid rgb(241, 113, 235);
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  max-width: 18rem;
+  background-color: whitesmoke;
+  background-color: white;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Efecto de elevación */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+.image {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+.autor {
+  text-align: right;
+  padding: 10px;
+  font-family: "Chilanka", cursive;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: auto;
+}
+
+.imageRendered{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 15px;
+
+}

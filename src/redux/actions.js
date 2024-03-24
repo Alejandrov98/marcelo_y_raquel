@@ -86,9 +86,9 @@ export const PostFoto = (atributos) => {
     try {
       var f = new FormData();
       f.append("METHOD", "POST");
-      f.append("foto", atributos.foto);
+      f.append("picture", atributos.picture);
       f.append("id_invitado", atributos.id_invitado)
-      var response = await axios.post(invitadosURL, f);
+      var response = await axios.post(fotosURL, f);
       console.log("Invitado creada en la ACTION: ", response.data);
       return dispatch({
         type: POST_INVITADO,

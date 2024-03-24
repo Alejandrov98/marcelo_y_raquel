@@ -3,16 +3,18 @@ import Welcome from "./components/Welcome/Welcome";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Style from "./App.module.css";
 import Album from "./components/Album/Album";
-import ListaInvitados from "./components/ListaInvitados/ListaInvitados";
+import Confirmar from "./components/Confirmar/Confirmar";
+import Lista from "./components/Lista/Lista";
 
 function App() {
   return (
     <div>
       <Welcome />
       <div className={Style.background}>
-        <ListaInvitados />
+        <Confirmar />
         <Information />
         <Album />
+        <Lista/>
       </div>
     </div>
   );

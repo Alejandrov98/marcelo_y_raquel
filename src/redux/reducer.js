@@ -17,6 +17,17 @@ const rootReducer = (state = initialState, action) => {
         ...state,
       };
 
+    case "GET_FOTOS":
+      return {
+        ...state,
+        fotos: action.payload,
+      };
+
+    case "POST_FOTO":
+      return {
+        ...state,
+      };
+
     default:
       return { ...state };
   }

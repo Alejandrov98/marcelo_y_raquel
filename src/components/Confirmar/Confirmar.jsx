@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { GetInvitados, PostInvitado } from "../../redux/actions";
 import { Button, Form } from "react-bootstrap";
-import Style from "./ListaInvitados.module.css";
+import Style from "./Confirmar.module.css";
 
-export default function ListaInvitados() {
+export default function Confirmar() {
   const dispatch = useDispatch();
 
   const initialState = {

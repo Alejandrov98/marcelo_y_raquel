@@ -1,6 +1,6 @@
 import React from "react";
 import Style from "./Welcome.module.css";
-import { BsInfoCircle, BsImage, BsPeople, BsBook } from "react-icons/bs";  // Importa los íconos deseados
+import { BsInfoCircle, BsImage, BsPeople, BsBook } from "react-icons/bs"; // Importa los íconos deseados
 
 export default function Welcome() {
   return (
@@ -11,28 +11,23 @@ export default function Welcome() {
       <div className={Style.navbar}>
         <div>
           <a className={Style.navLink} href="#informacionEvento">
-            <BsInfoCircle className={Style.icon} />
-            {" "}Información
+            <BsInfoCircle className={Style.icon} /> Información
           </a>
         </div>
         <div>
           <a className={Style.navLink} href="#fotos" disabled>
-            <BsImage className={Style.icon} />
-            {" "}Álbum
+            <BsImage className={Style.icon} /> Álbum
           </a>
-          <span className={Style.comingSoon}>(próximamente)</span>
         </div>
         <div>
           <a className={Style.navLink} href="#ListaInvitados" disabled>
-            <BsPeople className={Style.icon} />
-            {" "}Invitados
+            <BsPeople className={Style.icon} /> Invitados
           </a>
           <span className={Style.comingSoon}>(próximamente)</span>
         </div>
         <div>
           <a className={Style.navLink} href="#libroFirmas" disabled>
-            <BsBook className={Style.icon} />
-            {" "}Firmas
+            <BsBook className={Style.icon} /> Firmas
           </a>
           <span className={Style.comingSoon}>(próximamente)</span>
         </div>
