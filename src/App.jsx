@@ -5,6 +5,7 @@ import Style from "./App.module.css";
 import Album from "./components/Album/Album";
 import Confirmar from "./components/Confirmar/Confirmar";
 import Lista from "./components/Lista/Lista";
+import Firmas from "./components/Firmas/Firmas";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Information />
         <Album />
         <Lista/>
+        <Firmas/>
       </div>
     </div>
   );

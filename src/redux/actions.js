@@ -100,3 +100,45 @@ export const PostFoto = (atributos) => {
     }
   };
 };
+
+export const GetFirmas = () => {
+  return async function (dispatch) {
+    try {
+      var response = await axios.get(firmasURL);
+
+      if (response.data !== null) {
+        return dispatch({
+          type: GET_FIRMAS,
+          payload: response.data,
+        });
+      } else {
+        return dispatch({
+          type: GET_FIRMAS,
+          payload: [],
+        });
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+};
+
+export const PostFirma = (atributos) => {
+  return async function (dispatch) {
+    try {
+      var f = new FormData();
+      f.append("METHOD", "POST");
+      f.append("mensaje", atributos.mensaje);
+      f.append("id_invitado", atributos.id_invitado)
+      var response = await axios.post(firmasURL, f);
+      console.log("Firma creada en la ACTION: ", response.data);
+      return dispatch({
+        type: POST_FIRMA,
+        payload: response.data,
+      });
+    } catch (err) {
+      console.log(err);
+      throw err;
+    }
+  };
+};

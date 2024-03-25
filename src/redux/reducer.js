@@ -28,6 +28,17 @@ const rootReducer = (state = initialState, action) => {
         ...state,
       };
 
+    case "GET_FIRMAS":
+      return {
+        ...state,
+        firmas: action.payload,
+      };
+
+    case "POST_FIRMA":
+      return {
+        ...state,
+      };
+
     default:
       return { ...state };
   }

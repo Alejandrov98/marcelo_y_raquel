@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Chilanka&display=swap");
+
+.background {
+  background-image: url("../../assets/paperBackground.jpg");
+
+  height: auto;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.fixSize {
+  width: 80%;
+}
+
+.carouselContainer {
+  position: relative;
+}
+
+.carouselItemContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  max-width: 100%;
+}
+
+.firmaMensaje {
+  text-align: justify;
+  margin: 0;
+  padding: 20px;
+  font-family: "Chilanka", cursive;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18px;
+}
+
+.formContainer {
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  background-color: rgba(245, 245, 245, 0.9);
+  padding: 20px;
+}
+
+.container {
+  margin: 20px;
+}
+
+.firmaAutor {
+  text-align: right;
+  font-weight: bold;
+  padding: 10px;
+  margin-right: 2vw;
+}
