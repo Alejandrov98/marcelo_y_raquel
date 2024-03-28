@@ -63,7 +63,7 @@ export default function Confirmar() {
           </Form.Group>
           <br />
           <div className={Style.botCenter}>
-            <Button variant="light" onClick={handleSubmit}>
+            <Button variant="light" type="submit">
               Confirmar
             </Button>
           </div>
