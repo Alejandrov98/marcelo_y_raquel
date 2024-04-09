@@ -12,8 +12,8 @@ function App() {
     <div>
       <Welcome />
       <div className={Style.background}>
-        <Confirmar />
         <Information />
+        <Confirmar />
         <Album />
         <Lista/>
         <Firmas/>

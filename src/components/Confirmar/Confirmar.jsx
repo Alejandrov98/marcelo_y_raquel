@@ -11,17 +11,9 @@ export default function Confirmar() {
     nombre_completo: "",
   };
   const [formData, setFormData] = useState(initialState);
-  const [showComponent, setShowComponent] = useState(true); // Nuevo estado para controlar la visibilidad del componente
 
   useEffect(() => {
-    const currentDate = new Date();
-    const april7_2024 = new Date(2024, 3, 8); 
-
-    if (currentDate > april7_2024) {
-      setShowComponent(false);
-    } else {
-      dispatch(GetInvitados());
-    }
+    dispatch(GetInvitados());
   }, [dispatch]);
 
   const handleInputChange = (e) => {
@@ -33,21 +25,15 @@ export default function Confirmar() {
     e.preventDefault();
     try {
       await dispatch(PostInvitado(formData));
-
-      // Reiniciar el formulario después del envío exitoso
       setFormData(initialState);
     } catch (error) {
       console.error("Error al registrar el invitado: ", error);
     }
   };
 
-  if (!showComponent) {
-    return null; // Retorna null si no se debe mostrar el componente
-  }
-
   return (
     <div className={Style.container} id="confirmarAsistencia">
-      <h1>Confirmar Asistencia</h1>
+      <h1>Estuve en la boda</h1>
       <div className={Style.formContainer}>
         <Form onSubmit={handleSubmit} className={Style.formContainer}>
           <Form.Group controlId="nombre_completo">
@@ -64,7 +50,7 @@ export default function Confirmar() {
           <br />
           <div className={Style.botCenter}>
             <Button variant="light" type="submit">
-              Confirmar
+              Agregar
             </Button>
           </div>
         </Form>

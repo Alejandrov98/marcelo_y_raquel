@@ -10,7 +10,7 @@ export default function Album() {
     id_invitado: "",
     picture: "",
   });
-  
+
   const invitados = useSelector((state) => state.invitados);
   const fotos = useSelector((state) => state.fotos);
 
@@ -41,6 +41,9 @@ export default function Album() {
     try {
       await dispatch(PostFoto(formData));
       dispatch(GetFotos());
+      setFormData({
+        picture: "",
+      });
     } catch (error) {
       console.error("Error al publicar la foto:", error);
       // setShowError(true);
@@ -72,13 +75,16 @@ export default function Album() {
               </label>
             </div>
           )}
-          
+
           {formData.picture && (
             <div>
-              <img src={formData.picture} alt="" className={Style.imageRendered} />
+              <img
+                src={formData.picture}
+                alt=""
+                className={Style.imageRendered}
+              />
             </div>
           )}
-
 
           <div>
             {/* Select para seleccionar el invitado */}
@@ -128,17 +134,9 @@ export default function Album() {
       >
         {fotos
           .map((foto) => {
-            const invitadoSubidor = invitados.find(
-              (invitado) => invitado.id === foto.id_invitado
-            );
             return (
               <div key={foto.id} className={Style.card}>
                 <img src={foto.picture} alt="" className={Style.image} />
-                <p className={Style.autor}>
-                  {invitadoSubidor
-                    ? invitadoSubidor.nombre_completo
-                    : "Desconocido"}
-                </p>
               </div>
             );
           })

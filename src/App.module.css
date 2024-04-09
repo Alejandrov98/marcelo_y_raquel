@@ -3,6 +3,7 @@
   background-image: url("../src/assets/background.svg");
   background-size: cover;
   background-position: center center; 
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   color: #000000;
