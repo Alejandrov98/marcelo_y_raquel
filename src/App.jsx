@@ -12,11 +12,12 @@ function App() {
     <div>
       <Welcome />
       <div className={Style.background}>
-        <Information />
         <Confirmar />
+        <Information />
         <Album />
         <Lista/>
         <Firmas/>
+        
       </div>
     </div>
   );

@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { GetInvitados, PostInvitado } from "../../redux/actions";
 import { Button, Form } from "react-bootstrap";
 import Style from "./Confirmar.module.css";
 
 export default function Confirmar() {
   const dispatch = useDispatch();
+  const invitados = useSelector((state) => state.invitados);
 
   const initialState = {
     nombre_completo: "",
   };
   const [formData, setFormData] = useState(initialState);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     dispatch(GetInvitados());
@@ -23,17 +25,30 @@ export default function Confirmar() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Verificar si ya existe un invitado con el mismo nombre
+    const existeInvitado = invitados.some(
+      (invitado) => invitado.nombre_completo === formData.nombre_completo
+    );
+
+    if (existeInvitado) {
+      setError("Ya existe un invitado con ese nombre");
+      return;
+    }
+
     try {
       await dispatch(PostInvitado(formData));
       setFormData(initialState);
+      setError(null);
     } catch (error) {
       console.error("Error al registrar el invitado: ", error);
+      setError("Error al registrar el invitado");
     }
   };
 
   return (
     <div className={Style.container} id="confirmarAsistencia">
-      <h1>Estuve en la boda</h1>
+      <h1 style={{ textAlign: 'center' }}>Estuve en la boda, quiero dejarles mi dedicatoria</h1>
       <div className={Style.formContainer}>
         <Form onSubmit={handleSubmit} className={Style.formContainer}>
           <Form.Group controlId="nombre_completo">
@@ -47,6 +62,7 @@ export default function Confirmar() {
               required
             />
           </Form.Group>
+          {error && <p className={Style.error}>{error}</p>}
           <br />
           <div className={Style.botCenter}>
             <Button variant="light" type="submit">
